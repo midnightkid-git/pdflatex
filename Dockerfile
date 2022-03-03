@@ -8,7 +8,7 @@ FROM python:3.9.0
 
 RUN python3 -m pip install pip --upgrade
 RUN pip install aiohttp
-# RUN apt-get install -y latexmk
+RUN apt-get install -y latexmk
 # FROM python:3.7-alpine3.12
 # RUN apk add --no-cache --repository /packages     texlive     texmf-dist-latexextra     py3-aiohttp
 WORKDIR /usr/app/src
