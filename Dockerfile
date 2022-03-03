@@ -19,9 +19,6 @@ RUN apt-get update && apt-get install -y \
     libsasl2-dev \
     libldap2-dev \
     libssl-dev
-
-RUN python3 -m pip install pip --upgrade
-RUN pip install aiohttp
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -62,7 +59,10 @@ RUN /src/TinyTeX/bin/x86_64-linux/tlmgr path add \
     xcolor \
     xstring \
     cm-super
-
+    
+RUN python3 -m pip install pip --upgrade
+RUN pip install aiohttp
+RUN apt-get install -y latexmk
 WORKDIR /usr/app/src
 COPY pdflatex.py ./
 
