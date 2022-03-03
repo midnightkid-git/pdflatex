@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev
 
 RUN python3 -m pip install pip --upgrade
+RUN pip install aiohttp
 ENV PYTHONUNBUFFERED 1
 ENV DEBIAN_FRONTEND noninteractive
 
