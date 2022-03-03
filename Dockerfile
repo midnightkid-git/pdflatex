@@ -1,7 +1,7 @@
     
 FROM python:3.9.0
 
-CMD ["/bin/sh"]
+# CMD ["/bin/sh"]
 
 # RUN groupadd -r pdflatex
 # RUN useradd --system pdflatex --ingroup pdflatex
