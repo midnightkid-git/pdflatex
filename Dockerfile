@@ -1,11 +1,11 @@
     
 FROM python:3.9.0
 
-# CMD ["/bin/sh"]
+CMD ["/bin/sh"]
 
 # RUN groupadd -r pdflatex
 # RUN useradd --system pdflatex --ingroup pdflatex
-
+RUN apt-get update -y
 RUN python3 -m pip install pip --upgrade
 RUN pip install aiohttp
 RUN apt-get install -y latexmk
