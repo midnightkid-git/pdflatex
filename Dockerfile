@@ -1,5 +1,6 @@
     
 FROM python:3.9.0
+FROM alpine:3.4
 CMD ["/bin/sh"]
 
 RUN groupadd -r pdflatex
