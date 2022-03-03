@@ -4,7 +4,7 @@ FROM python:3.9.0
 CMD ["/bin/sh"]
 
 RUN groupadd -r pdflatex
-RUN useradd --system -G pdflatex pdflatex
+RUN useradd --system pdflatex --ingroup pdflatex
 
 RUN python3 -m pip install pip --upgrade
 RUN pip install aiohttp
